@@ -2,7 +2,7 @@ public class Book {
 
 	private static String bookTitle;
 	private static String authorName;
-	private static int ISBN;
+	private static long ISBN;
 	private static int numOfPages;
 	
 	public String getTitle() {
@@ -17,7 +17,7 @@ public class Book {
 	
 	}
 	
-	public int getISBN() {
+	public long getISBN() {
 	
 		return ISBN;
 	
@@ -29,7 +29,7 @@ public class Book {
 	
 	}
 	
-	public Book(String bT, String aN, int isbn, int nPages) {
+	public Book(String bT, String aN, long isbn, int nPages) {
 	
 		this.bookTitle = bT;
 		this.authorName = aN;

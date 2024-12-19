@@ -3,9 +3,18 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 import javax.swing.BoxLayout;
+import javax.swing.JTextField;
 import java.awt.Component;
 
 public class Screen extends JFrame {
+
+	//public void addComponent();
+	
+	public void updateScreen(boolean b) {
+	
+		this.setVisible(b);
+	
+	}
 	
 	public Screen(String title, boolean visible) {
 	

@@ -1,11 +1,8 @@
-import java.util.ArrayList;
 import java.awt.event.*;
 import java.awt.*;
 import javax.swing.*;
 
 public class driver implements LibActs {
-
-	private static ArrayList<Book> library;
 
 	public void addBook(Book book) {
 	
@@ -40,7 +37,7 @@ public class driver implements LibActs {
 		
 			public void actionPerformed(ActionEvent e) {
 			
-				searchCatalog(t.getText().trim());
+				d.searchCatalog(t.getText().trim());
 			
 			}
 		
@@ -48,18 +45,11 @@ public class driver implements LibActs {
 		panel.add(t);
 		screen.add(panel);
 		
-	
 	}
 	
 	public driver() {
 	
-		library = new ArrayList<>();
-		Book crimeAndPunishment = new Book("Crime and Punishment", "Fyodor Dostoevesky", 9787600329564L, 678);
-		Book wyndv = new Book("Wyndv: A Collection", "Gregory Brodst", 9798854226110L, 59);
-		Book dune = new Book("Dune", "Frank Herbert", 9780441013593L, 647);
-		addBook(crimeAndPunishment);
-		addBook(wyndv);
-		addBook(dune);
+		Osterhout library = new Osterhout();
 	
 	}
 

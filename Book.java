@@ -1,9 +1,9 @@
 public class Book {
 
-	private static String bookTitle;
-	private static String authorName;
-	private static long ISBN;
-	private static int numOfPages;
+	private String bookTitle;
+	private String authorName;
+	private long ISBN;
+	private int numOfPages;
 	
 	public String getTitle() {
 	

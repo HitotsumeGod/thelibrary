@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.awt.event.*;
-import java.awt.*;
 import javax.swing.*;
 
 public class driver implements LibActs {
@@ -40,13 +39,14 @@ public class driver implements LibActs {
 		
 			public void actionPerformed(ActionEvent e) {
 			
-				searchCatalog(t.getText().trim());
+				d.searchCatalog(t.getText().trim());
 			
 			}
 		
 		});
 		panel.add(t);
 		screen.add(panel);
+		screen.updateScreen(true);
 		
 	
 	}

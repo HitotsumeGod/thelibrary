@@ -1,3 +1,5 @@
+package main;
+
 public interface LibActs {
 
 	public void addBook(Book book);

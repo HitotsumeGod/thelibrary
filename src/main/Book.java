@@ -1,3 +1,5 @@
+package main;
+
 public class Book {
 
 	private static String bookTitle;
@@ -31,10 +33,10 @@ public class Book {
 	
 	public Book(String bT, String aN, long isbn, int nPages) {
 	
-		this.bookTitle = bT;
-		this.authorName = aN;
-		this.ISBN = isbn;
-		this.numOfPages = nPages;
+		bookTitle = bT;
+		authorName = aN;
+		ISBN = isbn;
+		numOfPages = nPages;
 	
 	}
 

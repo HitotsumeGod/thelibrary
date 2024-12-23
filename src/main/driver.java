@@ -1,8 +1,19 @@
-import java.awt.event.*;
-import java.awt.*;
-import javax.swing.*;
+package main;
 
-public class driver implements LibActs {
+import java.awt.Dimension;
+import java.awt.event.*;
+import javax.swing.*;
+import plugs.Shorthand;
+
+public class driver implements LibActs, Shorthand {
+	
+	public driver() {
+		
+		library = new Osterhout();
+	
+	}
+	
+	private static Osterhout library;
 
 	public void addBook(Book book) {
 	
@@ -17,11 +28,13 @@ public class driver implements LibActs {
 	
 	}
 	public void searchCatalog(String query) {
-	
+		
+		//if (library == null)
+			say("well, this is a problem");
 		for (Book b : library) {
 		
 			if (b.getTitle().equals(query))
-				System.out.println("Book is in catalog.");
+				say("Book is in catalog.");
 		
 		}
 	
@@ -29,10 +42,12 @@ public class driver implements LibActs {
 
 	public static void main(String[] args) {
 		
+		
 		driver d = new driver();
 		Screen screen = new Screen("libScreen", true, "Welcome to Peter's Library!", "images/lib.jpg");
 		JTextField t = new JTextField("                                                        ");
 		JPanel panel = new JPanel();
+		panel.setPreferredSize(new Dimension(300, 300));
 		t.addActionListener(new ActionListener() {
 		
 			public void actionPerformed(ActionEvent e) {
@@ -47,10 +62,11 @@ public class driver implements LibActs {
 		
 	}
 	
-	public driver() {
-	
-		Osterhout library = new Osterhout();
-	
+	@Override
+	public void say(String s) {
+		
+		System.out.println(s);
+		
 	}
 
 }

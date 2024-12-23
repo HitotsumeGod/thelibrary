@@ -1,5 +1,8 @@
+package main;
+
 public class Osterhout extends library {
 
+	private static final long serialVersionUID = 1L;
 	public Osterhout() {
 	
 		crimeAndPunishment = new Book("Crime and Punishment", "Fyodor Dostoevesky", 9787600329564L, 678);
